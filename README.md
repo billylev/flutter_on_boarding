@@ -12,4 +12,4 @@ The images are all .svg's so the are slow to show on first load. In a real proje
 
 ## Medium.com
 
-Read the accompanying article [here]()
+Read the accompanying article [here](https://billyleverington.medium.com/animated-onboarding-d85d2b2ec885)
