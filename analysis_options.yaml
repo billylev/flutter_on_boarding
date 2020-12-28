@@ -1,0 +1,12 @@
+#include: package:lint/analysis_options.yaml
+include: package:pedantic/analysis_options.yaml
+
+analyzer:
+  exclude:
+    - "lib/presentation/localization/**"
+  errors:
+    missing_required_param: error
+    argument_type_not_assignable: ignore
+    field_initializer_not_assignable: ignore
+    invalid_assignment: ignore
+    return_of_invalid_type: ignore
