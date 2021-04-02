@@ -4,7 +4,7 @@ import 'dart:math' as math;
 import 'package:flutter/widgets.dart';
 
 class SlidingIndicator extends StatelessWidget {
-  final ValueNotifier<double> notifier;
+  final ValueNotifier<double?> notifier;
   final Widget activeIndicator;
   final Widget inActiveIndicator;
   final int indicatorCount;
@@ -12,11 +12,11 @@ class SlidingIndicator extends StatelessWidget {
   final double margin;
 
   const SlidingIndicator({
-    Key key,
-    @required this.notifier,
-    @required this.activeIndicator,
-    @required this.inActiveIndicator,
-    @required this.indicatorCount,
+    Key? key,
+    required this.notifier,
+    required this.activeIndicator,
+    required this.inActiveIndicator,
+    required this.indicatorCount,
     this.sizeIndicator = 10,
     this.margin = 8,
   }) : super(key: key);
@@ -43,7 +43,7 @@ class SlidingIndicator extends StatelessWidget {
             AnimatedBuilder(
               animation: notifier,
               builder: (context, anim) {
-                var correctScroll = notifier.value;
+                var correctScroll = notifier.value!;
                 return Transform.translate(
                     offset:
                         Offset((margin * 2 + sizeIndicator) * correctScroll, 0),

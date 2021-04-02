@@ -11,7 +11,7 @@ class OnBoarding extends StatefulWidget {
 
 class _OnBoardingState extends State<OnBoarding> {
   final _pageController = PageController(initialPage: 0);
-  final ValueNotifier<double> scollPositionNotifier = ValueNotifier(0);
+  final ValueNotifier<double?> scollPositionNotifier = ValueNotifier(0);
 
   @override
   void initState() {
@@ -53,6 +53,6 @@ class _OnBoardingState extends State<OnBoarding> {
   }
 
   void _onScroll() {
-    scollPositionNotifier?.value = _pageController.page;
+    scollPositionNotifier.value = _pageController.page;
   }
 }

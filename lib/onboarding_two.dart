@@ -3,10 +3,10 @@ import 'package:on_boarding/effects.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class OnBoardingTwo extends StatelessWidget {
-  final ValueNotifier<double> scollPositionNotifier;
+  final ValueNotifier<double?>? scollPositionNotifier;
   final pageNum;
 
-  const OnBoardingTwo({Key key, this.scollPositionNotifier, this.pageNum})
+  const OnBoardingTwo({Key? key, this.scollPositionNotifier, this.pageNum})
       : super(key: key);
 
   @override
